@@ -25,7 +25,6 @@ const csvFilePath = path.join(directoryPath, 'embeddings.csv');
         readline.question("Please enter your question about NPR news today \n", resolve)
     });
 
-    // const query = "president biden's climate policy to the UN";
     const queryResponse = await openai.createEmbedding({
         model: 'text-embedding-ada-002',
         input: query,
