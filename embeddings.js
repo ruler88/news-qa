@@ -47,7 +47,7 @@ const csvFilePath = path.join(directoryPath, 'embeddings.csv');
 
     // Step 3: chunk token to max of 8191, as required by OpenAI API
     const chunkedArticles = [];
-    const chunkedTokenSize = 1000
+    const chunkedTokenSize = 1000;
     for (const article of articles) {
         const tokenLength = article.tokens.length;
         if (tokenLength > chunkedTokenSize) {
